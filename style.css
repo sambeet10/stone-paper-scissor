@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+15&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Platypi:ital,wght@0,300..800;1,300..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #24272e;
+}
+header {
+  background: wheat;
+  padding: 20px;
+}
+header > h1 {
+  color: #24272e;
+  text-align: center;
+  font-family: "Jersey 15";
+  font-size: 60px;
+}
+.score-board {
+  margin: 20px auto;
+  border: 3px solid white;
+  width: 200px;
+  text-align: center;
+  width: 200px;
+  color: aliceblue;
+  font-size: 46px;
+  padding: 15px 20px;
+  font-family: "platypi";
+  position: relative;
+}
+.badge {
+  background: #e9d315;
+  color: black;
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 2px 10px;
+  font-family: "platypi";
+}
+#user-label {
+  position: absolute;
+  top: 30px;
+  left: -35px;
+}
+#computer-label {
+  position: absolute;
+  top: 30px;
+  right: -85px;
+}
+.result {
+  font-size: 50px;
+  color: white;
+}
+.result > p {
+  text-align: center;
+  font-weight: bolder;
+  font-family: "Kalam";
+}
+.choice {
+  display: inline-block;
+  border: 4px solid white;
+  border-radius: 70%;
+  align-self: center;
+  size: 50px;
+  margin: 0 20px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+.choice:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+.choices {
+  margin: 50px 0;
+  text-align: center;
+}
+#action_message {
+  text-align: center;
+  color: blanchedalmond;
+  font-family: "kalam";
+  font-weight: bold;
+  font-size: 50px;
+}
+footer {
+  text-align: center;
+  font-size: 25px;
+  color: blanchedalmond;
+  padding: 20px;
+}
+/* Media Query for smaller screens */
+@media only screen and (max-width: 600px) {
+  header > h1 {
+    font-size: 30px;
+  }
+
+  .score-board {
+    width: 150px;
+    font-size: 28px;
+  }
+
+  .badge {
+    font-size: 14px;
+  }
+
+  #user-label {
+    top: 20px;
+    left: -15px;
+  }
+
+  #computer-label {
+    top: 20px;
+    right: -45px;
+  }
+
+  .result {
+    font-size: 30px;
+  }
+
+  .result > p {
+    font-size: 30px;
+  }
+
+  .choices {
+    display: flex;
+    flex-direction: column; /* Align items in a column */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    margin: 20px 0;
+  }
+
+  .choice {
+    width: 60px; /* Adjust the width of the choice container */
+    height: 60px; /* Adjust the height of the choice container */
+    margin: 10px 5px; /* Adjust the margin between choices */
+    padding: 5px; /* Adjust the padding inside the choice container */
+    border: 4px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center; /* Center image horizontally */
+    align-items: flex-end; /* Align image to the bottom */
+  }
+
+  .choice img {
+    max-width: 100%; /* Ensure image does not exceed container width */
+    max-height: 100%; /* Ensure image does not exceed container height */
+  }
+
+  .choices img {
+    width: 50px; /* Adjust the width of the images */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 2px; /* Add less space between images and choice container */
+  }
+
+  #action_message {
+    font-size: 30px;
+  }
+
+  footer {
+    font-size: 16px;
+  }
+}
+
+.green-glow {
+  border: 4px solid #4dcc7d;
+  box-shadow: 0 0 10px #218b28;
+}
+.red-glow {
+  border: 4px solid #fc121b;
+  box-shadow: 0 0 10px #d01115;
+}
+.gray-glow {
+  border: 4px solid #464647;
+  box-shadow: 0 0 10px #25292b;
+}
